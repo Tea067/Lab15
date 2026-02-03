@@ -19,3 +19,42 @@ int main(){
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a, int &b, int &c, int &d) {
+    int r = rand() % 6;   
+
+    int t;
+    switch (r) {
+        case 0: 
+            t = a; a = d; d = t;
+            break;
+
+        case 1: 
+            t = b; b = d; d = t;
+            break;
+
+        case 2: 
+            t = a; a = c; c = t;
+            break;
+
+        case 3: 
+            t = b; b = c; c = t;
+            break;
+
+        case 4: 
+            t = a;
+            a = b;
+            b = c;
+            c = d;
+            d = t;
+            break;
+
+        case 5: 
+            t = d;
+            d = c;
+            c = b;
+            b = a;
+            a = t;
+            break;
+    }
+}
